@@ -13,7 +13,7 @@
             // create a new script element
             var script = document.createElement('script');
             script.async = 1;
-            script.src = 'tracking.js';
+            script.src = 'js/tracking.js';
 
             // insert the script element into the document
             var firstScript = document.getElementsByTagName('script')[0];

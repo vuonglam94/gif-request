@@ -1,12 +1,12 @@
 <?php
-$collect_gif_file = 'collect.gif';
+$collect_gif_file = dirname( __DIR__) . '/img/collect.gif';
 
 /**
  * write log GET parameters
  */
-$log_path = 'log.txt';
+$log_path = dirname( __DIR__) . '/log.txt';
 $file_handle = fopen($log_path, 'a+') or die("Unable to open file!");
-fwrite($file_handle, json_encode($_GET));
+fwrite($file_handle, json_encode($_GET) . "\n");
 fclose($file_handle);
 
 if (file_exists($collect_gif_file)) {
